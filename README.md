@@ -11,11 +11,12 @@ Below is the configuration of incorporating JavaFX in IntelliJ IDE.
 Note: If you are adding JavaFX in a new project, you will require a module-info.java file as you can see in my project.
 To add it right click on src -> new -> module-info.java. 
 Paste the following code in it
+
 module Javafx {
+
     requires javafx.fxml;
     requires javafx.controls;
-
-    open <YOUR PACKAGE NAME>;
+    opens <YOUR PACKAGE NAME>;
 }
 
 This module-info.java needs to be in the src folder where your package is present.
